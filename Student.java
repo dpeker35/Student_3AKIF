@@ -40,23 +40,22 @@ public class Student
     
     public void setName(String name)
     {
-        
         this.name = name;
     }
 
-    public void setAlter(int Alter)
+    public void setAlter(int alter)
     {
-        this.alter = Alter;
+        this.alter = alter;
     }
 
-    public void setReligion(String Religion)
+    public void setReligion(String religion)
     {
-        this.religion = Religion;
+        this.religion = religion;
     }
     
-    public void setMatura(boolean Matura)
+    public void setMatura(boolean matura)
     {
-        this.matura = Matura;
+        this.matura = matura;
     }
 
     public String getName()
@@ -78,20 +77,52 @@ public class Student
     {
         return matura;
     }
+    /*
+    public int getLength()
+    {
+        int erg;
+        
+        erg = name.length();
+        
+        return erg;
+    }
+    */
+    public String getAccount()
+    {
+        String erg;
+        
+        erg = name.substring(0,4);
+        
+        return erg;
+    }
+    
+    public String getInitialen()
+    {
+        String erg;
+        int pos;
+        
+        erg = "" + name.charAt(0);
+        pos = name.indexOf(' ')+1;
+        erg = erg + name.charAt(pos);
+        
+        return erg;
+    }
     
     public void printStudent()
-    
     {
-        if(matura == true)
+        if (matura == true)
         {
-        System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", Matura: " + matura);
+            System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", Matura");
         }
         else
         {
-            System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", Matura: " + ", keine matura");
+            System.out.println(name + ": " + alter + " Jahre, Rel: " + religion + ", keine Matura");
         }
     }
 }
+
+
+
 
 
 
