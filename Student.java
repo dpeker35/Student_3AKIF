@@ -5,7 +5,7 @@ public class Student
     private String  religion;       // ...
     private boolean matura;
     
-    // Constructor //
+    // Constructor // ///
     public Student(String name, int alter, String religion, boolean matura)
     {
         setName(name);
