@@ -11,7 +11,7 @@ public class TestSchool
         School s;
         
         s = new School();
-        assertEquals (s.altesterStudent(), -999);
+        assertEquals(s.altersterStudent(), -999);
     }
 
     @Test
@@ -23,7 +23,7 @@ public class TestSchool
         s = new School();
         susi = new Student("Susi", 21, "rk");
         s.anmelden(susi);
-        assertEquals (s.altesterStudent(), 21);
+        assertEquals(s.altersterStudent(), 21);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class TestSchool
         s.anmelden(susi);
         max = new Student("Max", 29, "ob");
         s.anmelden(max);
-        assertEquals (s.altesterStudent(), 29);
+        assertEquals(s.altersterStudent(), 29);
     }
 
     @Test
@@ -53,7 +53,7 @@ public class TestSchool
         s.anmelden(max);
         maria = new Student("Maria", 25, "ob");
         s.anmelden(maria);
-        assertEquals (s.altesterStudent(), 29);
+        assertEquals (s.altersterStudent(), 29);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class TestSchool
         s.anmelden(max);
         maria = new Student("Maria", 25, "ob");
         s.anmelden(maria);
-        assertEquals (s.altesterStudent(), 31);
+        assertEquals (s.altersterStudent(), 31);
     }
 
     @Test
@@ -85,7 +85,7 @@ public class TestSchool
         s.anmelden(max);
         maria = new Student("Maria", 33, "ob");
         s.anmelden(maria);
-        assertEquals (s.altesterStudent(), 33);
+        assertEquals (s.altersterStudent(), 33);
     }
 
 }
