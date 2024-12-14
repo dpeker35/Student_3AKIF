@@ -6,21 +6,28 @@ public class School
     
     public void anmelden(Student wer)
     {
+       if(wer !=null)
+       {
+        if(wer.getSchool() == null)
+       {
         if (sessel0 == null)
         {
             sessel0 = wer;
+            wer.setSchool(this);
         }
         else
         {
             if (sessel1 == null)
             {            
                 sessel1 = wer;
+                 wer.setSchool(this);
             }
             else
             {
                 if (sessel2 == null)
                 {
                     sessel2 = wer;
+                     wer.setSchool(this);
                 }
                 else
                 {
@@ -29,6 +36,20 @@ public class School
             }
         }
     }
+    else
+    {
+        System.out.println("Fehler: schon in einer Schule angemeldet!");
+    }
+}
+else
+{
+    System.out.println("Fehler: kein Student!");
+}
+}
+
+
+
+
     
     public void abmeldenJungerStudent()
     {
@@ -47,21 +68,26 @@ public class School
     
     public void abmelden(Student wer)
     {
+       if(wer != null)
+       {
         if (sessel0 == wer)
         {
             sessel0 = null;
+            wer.setSchool(null); //für back reference
         }
         else
         {
             if (sessel1 == wer)
             {
                 sessel1 = null;
+                wer.setSchool(null);
             }
             else
             {
                 if (sessel2 == wer)
                 {
                     sessel2 = null;
+                    wer.setSchool(null);
                 }
                 else
                 {
@@ -70,7 +96,12 @@ public class School
             }
         }
     }
-    
+    else
+    {
+        System.out.println("Fehler: kein gültiger Student!");
+    }
+}
+
     public void printSchool()
     {
         if (sessel0 != null)

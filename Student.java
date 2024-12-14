@@ -4,6 +4,7 @@ public class Student
     private int     alter;          // Alter des Studierenden
     private String  religion;       // ...
     private boolean matura;
+    private School school;
     
     // Constructor // ///
     public Student(String name, int alter, String religion, boolean matura)
@@ -40,7 +41,16 @@ public class Student
     
     public void setName(String name)
     {
-        this.name = name;
+        if(name != null)
+        {
+            this.name = name;
+        }
+        
+        else
+        {
+            System.out.println("Fehler: kein gültiger Name!");
+            this.name = "UNKNW";
+        }
     }
 
     public void setAlter(int alter)
@@ -60,14 +70,28 @@ public class Student
 
     public void setReligion(String religion)
     {
-        this.religion = religion;
+        if(religion != null)
+        {
+            this.religion = religion;
+        }
+        else
+        {
+            System.out.println("Fehler...!");
+            this.religion = "ob";
+        }
     }
     
     public void setMatura(boolean matura)
     {
         this.matura = matura;
     }
+    
+    public void setSchool(School school)
+    {
+        this.school = school;
+    }
 
+    
     public String getName()
     {
         return name;
@@ -103,6 +127,12 @@ public class Student
         return initialen;
     }
 
+    
+       public School getSchool()
+    {
+        return school;
+    }
+    
     public void printStudent()
     {
         if (matura == true)
